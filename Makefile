@@ -6,7 +6,7 @@
 #    By: ehedeman <ehedeman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 13:09:29 by ehedeman          #+#    #+#              #
-#    Updated: 2024/01/25 12:38:14 by ehedeman         ###   ########.fr        #
+#    Updated: 2024/03/06 13:34:18 by ehedeman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,16 @@ SRC = 	ft_isalpha.c			\
 		ft_print_str.c			\
 		ft_print_unsigned.c		\
 		ft_printf.c				\
-		ft_itoa_print.c	
+		ft_itoa_print.c			\
+		ft_lstadd_back.c		\
+		ft_lstadd_front.c		\
+		ft_lstclear.c			\
+		ft_lstdelone.c			\
+		ft_lstiter.c			\
+		ft_lstlast.c			\
+		ft_lstmap.c				\
+		ft_lstnew.c				\
+		ft_lstsize.c
 
 SRC_DIR = src/
 #SRC_PREF = $(addprefix $(SRC_DIR), $(SRC))
