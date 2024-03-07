@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:35:08 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/01/25 10:20:00 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/03/06 13:31:28 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 #include <string.h>
 #include <fcntl.h>
 #include "ft_printf.h"
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
@@ -59,3 +65,12 @@ int				ft_strlen_get(char *str);
 char			*ft_strchr_get(const char *s, int c);
 char			*copy_line(char	*str);
 char			*cut_line(char *str);
+t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+int				ft_lstsize(t_list *lst);
+t_list			*ft_lstlast(t_list *lst);
+void			ft_lstdelone(t_list *lst, void (*del)(void*));
+void			ft_lstclear(t_list **lst, void (*del)(void*));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), \
+				void (*del)(void *));
